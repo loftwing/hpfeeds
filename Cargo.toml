@@ -3,6 +3,10 @@ name = "hpfeeds"
 version = "0.1.0"
 authors = ["Chance <albatross@loftwing.net>"]
 edition = "2018"
+description = "Hpfeeds3 protocol library"
+keywords = ["hpfeeds", "honeypot"]
+categories = ["network-programming"]
+maintenance = { status = "as-is"}
 
 [dependencies]
 byteorder = "*"
