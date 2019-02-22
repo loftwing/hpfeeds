@@ -11,7 +11,7 @@ repository = "https://github.com/loftwing/hpfeeds"
 license = "AGPL-3.0-or-later"
 
 [dependencies]
-byteorder = "*"
-simple-error = "*"
-log = "*"
-sha-1 = "*"
+byteorder = "1.3.1"
+simple-error = "0.1.13"
+log = "0.4.6"
+sha-1 = "0.8.1"
