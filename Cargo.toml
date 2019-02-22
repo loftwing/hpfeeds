@@ -1,0 +1,11 @@
+[package]
+name = "hpfeeds"
+version = "0.1.0"
+authors = ["Chance <albatross@loftwing.net>"]
+edition = "2018"
+
+[dependencies]
+byteorder = "*"
+simple-error = "*"
+log = "*"
+sha-1 = "*"
