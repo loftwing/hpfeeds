@@ -18,7 +18,7 @@ pub struct Hpfeeds {
 }
 
 impl Hpfeeds {
-    fn new(host: &str, port: u32, ident: &str, secret: &str) -> Result<Hpfeeds, Box<Error>> {
+    pub fn new(host: &str, port: u32, ident: &str, secret: &str) -> Result<Hpfeeds, Box<Error>> {
         let mut s = TcpStream::connect(format!("{}:{}", host, port))?;
         let mut buf_info = vec![0u8; 1024];
         let c_info_read = s.read(&mut buf_info)?;
@@ -41,7 +41,7 @@ impl Hpfeeds {
         })
     }
 
-    fn publish_to(&self, channel: &str, payload: &[u8]) -> Result<(), Box<Error>> {
+    pub fn publish_to(&self, channel: &str, payload: &[u8]) -> Result<(), Box<Error>> {
         send_publish(&self.sock, &self.ident, channel, payload)?;
         Ok(())
     }
