@@ -7,6 +7,8 @@ description = "Hpfeeds3 protocol library"
 keywords = ["hpfeeds", "honeypot"]
 categories = ["network-programming"]
 maintenance = { status = "as-is"}
+repository = "https://github.com/loftwing/hpfeeds"
+
 
 [dependencies]
 byteorder = "*"
