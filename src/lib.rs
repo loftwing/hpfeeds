@@ -1,9 +1,8 @@
-#![allow(dead_code)]
 use std::net::TcpStream;
 use std::io::prelude::*;
 use std::error::Error;
 
-use log::{info, debug, error};
+use log::{info};
 
 use byteorder::{BigEndian, ReadBytesExt, WriteBytesExt};
 use simple_error::bail;
@@ -26,7 +25,7 @@ impl Hpfeeds {
 
         let info_msg = handle_recv(buf_info)?;
         let (bn, nonce) = match info_msg {
-            HpfeedsMsg::InfoMsg(hdr, bn, nonce) => {
+            HpfeedsMsg::InfoMsg(_hdr, bn, nonce) => {
                 (bn, nonce)
             },
             _ => bail!("First packet was not OP_INFO."),
