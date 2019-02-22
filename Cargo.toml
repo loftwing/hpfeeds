@@ -8,7 +8,7 @@ keywords = ["hpfeeds", "honeypot"]
 categories = ["network-programming"]
 maintenance = { status = "as-is"}
 repository = "https://github.com/loftwing/hpfeeds"
-
+license = "AGPL-3.0-or-later"
 
 [dependencies]
 byteorder = "*"
